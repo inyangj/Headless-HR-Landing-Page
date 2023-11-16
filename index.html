@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script type="module" src="./tailwindconfig.js" defer></script>
+    <title>Headless HR</title>
+  </head>
+  <body class="font-openSans">
+    <header class="sticky top-0 bg-white z-50">
+      <nav
+        class="flex justify-between items-center p-4 sm:pt-[1.5rem] sm:p-6 xl:px-[4rem]"
+      >
+        <div class="flex gap-2 md:gap-4 items-center">
+          <img
+            src="./assets/blackLogo.png"
+            class="w-[2.813rem] md:w-[4.063rem]"
+            alt="Logo"
+          />
+          <p>|</p>
+          <p
+            class="w-[11.75rem] font-semibold text-xs sm:text-sm text-renaissance_black"
+          >
+            <span class="font-normal">Powered by</span> <br />
+            Renaissance Innovation Labs
+          </p>
+        </div>
+
+        <ul
+          class="hidden sm:flex sm:gap-4 xl:gap-10 text-xs sm:text-sm text-renaissance_black"
+        >
+          <li>How it works</li>
+          <li>Documentation</li>
+          <li>Pricing</li>
+        </ul>
+
+        <button
+          class="hidden sm:block py-3 px-6 rounded-md text-white border border-[rgba(33, 41, 52, 0.07)] bg-purple_2 shadow-3xl text-sm"
+        >
+          Join the beta
+        </button>
+
+       <img src="./assets/svgs/Menu.svg" class="sm:hidden" id="menuToggle" alt="Menu icon"/>
+
+      <div
+        class="absolute z-50 right-0 top-0 bg-[#F9F9F9] p-8 h-screen w-3/4"
+        id="menuContainer"
+      >
+        <img src="./assets/svgs/Cancel.svg" class="absolute right-4 top-6"
+        id="closeMenu" alt="Cancel Icon"/>
+
+          <ul
+            class="grid gap-6 justify-center mt-[9.375rem] text-renaissance_black"
+          >
+            <li>How it works</li>
+            <li>Documentation</li>
+            <li>Pricing</li>
+          </ul>
+
+          <button
+            class="bg-purple_2 py-3 text-white px-6 block mx-auto mt-6 rounded-md"
+            onclick="toggleMenu()"
+          >
+            Join the beta
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <div class="grid p-8 md:p-28 items-center justify-center gap-5 md:text-center lg:mx-20 xl:mx-48 z-40">
+        <h1 class="z-30 text-3xl md:text-4xl xl:text-5xl font-bold">Unlock Your Company's Potential with Our HR Solutions</h1>
+        <p class="z-30 md:mx-auto xl:w-[43.75rem]">Headless HR is an automated Human resource management platform created for Human Resource Managers to be able to handle applications thereby reducing job application process time by 40%.</p>
+        <div class="md:w-[37.5rem] z-30 mx-auto mt-12 xl:mt-20">
+          <p class="text-left text-sm text-renaissance_gray_1 mb-2">Join the waitlist and get access to HR automation</p>
+
+          <div class="flex items-center justify-between bg-renaissance_white focus:outline-purple_2/70 border border-gray_300 rounded pl-[1rem] shadow-inputShadow">
+            <div class="flex items-center gap-[4px] md:gap-[0.5rem]">
+            <img src="./assets/sms.png" alt="input-icon" />
+            <input
+              type="email"
+              placeholder="what’s your email address"
+              class=" border-0 text-renaissance_black text-base p-3 transition"
+            />
+            </div>
+            <Button class="bg-purple_2 rounded-md text-white border-[rgba(33, 41, 52, 0.07)]  px-4 py-3 md:px-5 block my-auto">Join waitlist</Button>
+          </div>
+        </div>
+      
+        <img src="./assets/yellowCursor.png" class='hidden w-[8.75rem] xl:w-[12.5rem] md:block absolute left-1 lg:left-28 top-[14.375rem]  xl:left-44 z-10' alt="position-icons" />
+      
+        <img src="./assets/GreenCursor.png" class="hidden md:block w-[10rem] xl:w-[12.5rem] absolute right-1 lg:right-14 xl:right-48 top-[13.125rem]" alt="position-icons" />
+      
+        <img src="./assets/blackCursor.png" class="hidden lg:block w-[10rem] xl:w-[12.5rem] absolute right-1 lg:right-16 xl:right-56 top-[26.25rem]" alt="position-icons" />
+      </div>
+
+      <section class="mt-20 mx-8 md:flex lg:justify-between items-center lg:mx-16 xl:mx-[9rem]">
+        <div class="lg:w-[30.375rem]">
+          <h3 class="pb-4 md:pb-6 text-2xl md:text-4xl font-bold">One Dashboard to control all your application process</h3>
+          <p class="text-renaissance_gray_1 text-lg">Our solution helps you manage applications, interview sessions, notifications, and recruitment from one place</p>
+        </div>
+        <div>
+          <img src="./assets/dashboard.png" alt="image of dashboard" />
+        </div>
+      </section>
+
+
+
+      <section class="mt-36 mb-12 mx-8 md:flex md:flex-col lg:justify-center items-center lg:mx-16 xl:mx-[9rem]">
+        <h3 class="text-2xl md:text-4xl font-bold text-renaissance_Primary_black">Easy recruitment and onboarding</h3>
+        <p class="text-renaissance_gray_1 md:w-[37.188rem] md:text-center pt-2">We've created features to help your human resources manage job applications, team management, recruitment processes, and employee onboarding.</p>
+        <div class="flex gap-6 mt-20">
+          <button class="text-renaissance_Primary_black border border-renaissance_Primary_black py-2 px-3 rounded-3xl md:rounded-4xl md:py-5 md:px-6 md:w-[14.813rem] block">For Applicants</button>
+          <button>For Organization</button>
+        </div>
+      </section>
+
+
+
+      
+<section class="bg-green_600 pt-6 mx-4 lg:mx-16 xl:mx-32 rounded-5xl">
+  <div class="bg-purple_2 w-full rounded-3xl relative md:flex md:items-center lg:gap-[5.5rem] md:px-[1.94rem] lg:px-10 xl:pl-20 xl:pr-0 xl:pt-0 py-[2.1rem]">
+    <div class="text-renaissance_white px-4 py-6 md:px-0 md:py-0 lg:w-full">
+      <h3 class="pb-6 md:pb-4 text-2xl font-bold">Easy Application for Applicants</h3>
+      <ul class="list-disc pl-2 grid gap-[2px] pb-6 text-sm lg:text-base"> 
+        <li>A user-friendly form to submit job applications</li>
+        <li>A status update email to keep applicants informed of the progress of their application</li>
+        <li>The ability to upload resumes and cover letters</li>
+        <li>A confirmation email after submitting the application</li>
+      </ul>
+      <button class="rounded-md  border shadow-3xl text-sm bg-renaissance_white text-renaissance_Primary_black border-[rgba(33, 41, 52, 0.07)] py-2 px-3 font-semibold md:py-3 md:px-5 block my-auto">Learn More</button>
+    </div>
+
+    <figure class="w-full">
+      <img src="./assets/applicationform2.png" class="block" alt="application-form-2" />
+      <img src="./assets/application1.png" class="absolute right-9 md:right-[4.25rem] bottom-3 w-[190px] md:bottom-10 lg:bottom-4 lg:right-[4.5rem] xl:w-[210px] xl:right-[3.5rem]" alt="application-form-1" />
+    </figure>
+  </div>
+</section>
+
+<div class="relative mt-[5rem] md:mt-[8rem] xl:mt-[11rem]">
+  <div class='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[2.1rem] md:text-[3rem] lg:text-[4rem] font-bold opacity-40 text-Renaissance_gray_4'>
+    How it works
+  </div>
+  <h2 class='text-renaissance_Primary_black text-[1.75rem] font-bold absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10'>
+    How it works
+  </h2>
+</div>
+<div class="my-[2rem]"><br/></div>
+
+<section class="mt-[2rem]">
+  <div class="grid gap-6 justify-center md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  md:pl-20">
+    <div class="bg-[#D5EDFA] w-[15.95231rem] rounded-[0.80263rem]">
+      <h3 class="p-2 w-[13.6875rem] text-renaissance_Primary_black font-semibold text-lg">Sign up with your details or use one-click sign up</h3>
+      <div class="flex justify-between">
+        <h2 class="font-bold opacity-10 text-renaissance_Primary_black self-end pl-2 pb-2 text-5xl md:text-[4.01319rem]">01</h2>
+        <img src="./assets/work1.png" alt="image on how it works" />
+      </div>
+    </div>
+    <div class="bg-[#D4CAFF] w-[15.95231rem] rounded-[0.80263rem]">
+      <h3 class="p-2 w-[7.625rem] text-renaissance_Primary_black font-semibold text-lg">Create an Organization</h3>
+      <div class="flex justify-between">
+        <h2 class="font-bold opacity-10 text-renaissance_Primary_black self-end pl-2 pb-2 text-5xl md:text-[4.01319rem]">02</h2>
+        <img src="./assets/work2.png" alt="image on how it works" />
+      </div>
+    </div>
+    <div class="bg-[#FFE5C2] w-[15.95231rem] rounded-[0.80263rem]">
+      <h3 class="p-2 w-[9.9375rem] text-renaissance_Primary_black font-semibold text-lg">Create an application form</h3>
+      <div class="flex justify-between">
+        <h2 class="font-bold opacity-10 text-renaissance_Primary_black self-end pl-2 pb-2 text-5xl md:text-[4.01319rem]">03</h2>
+        <img src="./assets/work3.png" alt="image on how it works" />
+      </div>
+    </div>
+    <div class="bg-[#FCC5CE] w-[15.95231rem] rounded-[0.80263rem]">
+      <h3 class="p-2 text-center w-[12.625rem] text-renaissance_Primary_black font-semibold text-lg">Control all application from one dashboard</h3>
+      <div class="flex justify-between">
+        <h2 class="font-bold opacity-10 text-renaissance_Primary_black self-end pl-2 pb-2 text-5xl md:text-[4.01319rem]">04</h2>
+        <img src="./assets/work5.png" alt="image on how it works" />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="mx-[1.7rem] mt-4 lg:mt-28 md:mt-8 md:mx-0 flex justify-between items-center">
+  <img src="./assets/handsLeft.png" class="hidden lg:block self-end w-[16rem]" alt="left hand image" />
+  <div class="md:text-center md:mx-auto mb-[3rem] lg:mb-0">
+    <h2 class="font-bold pb-2 pt-4 md:pt-0 text-4xl xl:text-[4rem] md:pb-6">
+      Get your hands on
+    </h2>
+    <p class="pb-4 md:pb-8 md:text-xl">Join our beta program to enjoy the benefits of Headless HR</p>
+    <button class="block md:mx-auto py-3 px-6 rounded-md text-white border border-[rgba(33, 41, 52, 0.07)] bg-purple_2 shadow-3xl text-sm">
+      Join the beta
+    </button>
+  </div>
+  <img src="./assets/handsRight.png" class="hidden lg:block self-end w-[18rem]" alt="right hand image" />
+</section>
+
+
+
+
+
+
+<footer>
+  <div class=" pl-3 bg-purple_2 pt-[4.375rem] lg:pt-[3.75rem] lg:pl-[3.625rem] xl:pt-[5.625rem] xl:pl-[7.8125rem] px-[0.3125rem] pb-[1.25rem] flex flex-row-reverse md:gap-[0.625rem] md:pr-[0px] items-center justify-between">
+    <div class="hidden md:block w-full xl:w-[31.25rem]">
+      <img src="./assets/footImage.png" class="w-full" alt="footer-image" />
+    </div>
+    <div class="text-renaissance_white xl:w-[32.1875rem]">
+      <h1 class="text-3xl md:text-5xl xl:text-6xl font-bold ">Get early access to Headless HR</h1>
+      <p class="text-[1rem] mt-[1.125rem] mb-[1.5rem]">
+        We are opening early access to companies and organisations willing to improve and automate their recruitment process.
+      </p>
+      <div class="flex items-center justify-between bg-renaissance_white focus:outline-purple_2/70 border border-gray_300 rounded pl-[1rem] shadow-inputShadow">
+        <div class="flex items-center gap-[4px] md:gap-[0.5rem]">
+        <img src="./assets/sms.png" alt="input-icon" />
+        <input
+          type="email"
+          placeholder="what’s your email address"
+          class=" border-0 text-renaissance_black text-base p-3 transition"
+        />
+        </div>
+        <Button class="bg-purple_2 rounded-md text-white border-[rgba(33, 41, 52, 0.07)]  px-4 py-3 md:px-5 block my-auto">Join waitlist</Button>
+      </div>
+    </div>
+  </div>
+  <div class="pt-[1.25rem] pl-[0.4375rem] md:pl-[0.875rem] lg:pr-[0.875rem]">
+    <div class="lg:flex lg:justify-between lg:items-end">
+      <div class="flex gap-2 md:gap-4 items-center">
+        <img src="./assets/purpleLogo.png" class="w-[45px] md:w-[65px]" alt="Logo">
+        <p>|</p>
+        <p class="w-[188px] font-semibold text-xs sm:text-sm text-purple_2"><span class=" font-normal">Powered by</span> <br />Renaissance Innovation Labs</p>
+      </div>
+
+      <ul class="footer flex flex-col gap-[0.3125rem] md:flex-row md:justify-center md:items-center md:gap-[0.625rem] text-renaissance_Primary_black font-semibold mt-[1.25rem] lg:my-auto md:uppercase">
+        <li >Documentation</li>
+        <li>How it works</li>
+        <li>Pricing</li>
+        <li>Contact us</li>
+        <li>About RIL</li>
+      </ul>
+    </div>
+    <p class="my-[0.625rem] text-right mr-[0.25rem] lg:mr-[0rem]">&copy; 2023 @renaisnacelabs.org</p>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="./nav.js"></script>
+  </body>
+</html>
