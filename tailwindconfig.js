@@ -22,6 +22,9 @@ tailwind.config = {
           "4xl": "80px",
           "5xl": "48px",
         },
+        screens: {
+          'ssm': '392px',
+        },
       },
     },
   };
