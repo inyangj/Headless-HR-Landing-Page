@@ -1,4 +1,4 @@
-const apiKey = 'rhfsdikclojdx nvdsxpodsxpojqfw scjx nio'; 
+const apiKey = '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'; 
 
 const api = axios.create({
     baseURL: 'https://api.sendinblue.com/v3',
@@ -38,3 +38,5 @@ const joinWaitList = async () => {
 };
 
 document.getElementById('joinWaitlistBtn').addEventListener('click', joinWaitList);
+document.getElementById('WaitlistBtn').addEventListener('click', joinWaitList);
+document.getElementById('joinWaitlist').addEventListener('click', joinWaitList);
