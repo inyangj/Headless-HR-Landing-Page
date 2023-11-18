@@ -41,7 +41,7 @@
         >
           <li>How it works</li>
           <li>Documentation</li>
-          <li>Pricing</li>
+          <li id="openModalButton" class="cursor-pointer">Pricing</li>
         </ul>
 
         <button
@@ -73,7 +73,7 @@
           >
             <li>How it works</li>
             <li>Documentation</li>
-            <li>Pricing</li>
+            <li id="openModal" class="cursor-pointer">Pricing</li>
           </ul>
 
           <button
@@ -84,6 +84,8 @@
         </div>
       </nav>
     </header>
+
+    <!-- Hero Section -->
 
     <div
       class="grid p-4 md:p-28 items-center justify-center gap-5 md:text-center lg:mx-20 xl:mx-48 z-40"
@@ -147,6 +149,8 @@
       />
     </div>
 
+    <!-- Dashboard Control Section -->
+
     <section
       class="mt-20 mx-8 md:flex lg:justify-between items-center lg:mx-16 xl:mx-[9rem]"
     >
@@ -163,6 +167,8 @@
         <img src="./assets/dashboard.png" alt="image of dashboard" />
       </div>
     </section>
+
+    <!-- Easy Recuritment Section -->
 
     <section
       class="mt-36 mb-12 mx-8 md:flex md:flex-col lg:justify-center items-center lg:mx-16 xl:mx-[9rem]"
@@ -193,7 +199,11 @@
       </div>
     </section>
 
+    <!-- Rendered Component for the Recuritment -->
+
     <div id="renderedComponent"></div>
+
+    <!-- How It works Section -->
 
     <div class="relative mt-[5rem] md:mt-[8rem] xl:mt-[11rem]">
       <div
@@ -208,6 +218,8 @@
       </h2>
     </div>
     <div class="my-[2rem]"><br /></div>
+
+    <!-- Card section of how it works -->
 
     <section class="mt-[2rem] card">
       <div
@@ -276,6 +288,8 @@
       </div>
     </section>
 
+    <!-- Get your hands on Section -->
+
     <section
       class="mx-[1.7rem] mt-4 lg:mt-28 md:mt-8 md:mx-0 flex justify-between items-center"
     >
@@ -303,6 +317,8 @@
         alt="right hand image"
       />
     </section>
+
+    <!-- footer section -->
 
     <footer>
       <div
@@ -340,6 +356,8 @@
           </div>
         </div>
       </div>
+
+      <!-- Foot note section -->
       <div
         class="pt-[1.25rem] lg:mx-[3rem] lg:my-[2.5rem] pl-[0.4375rem] md:pl-[0.975rem] lg:pr-[0.875rem]"
       >
@@ -364,7 +382,7 @@
           >
             <li>Documentation</li>
             <li>How it works</li>
-            <li>Pricing</li>
+            <li id="modalButton" class="cursor-pointer">Pricing</li>
             <li>Contact us</li>
             <li>About RIL</li>
           </ul>
@@ -377,8 +395,166 @@
       </div>
     </footer>
 
+    <!-- Pricing modal -->
+
+    <div
+      id="pricingModal"
+      class="modal hidden fixed inset-0 bg-black bg-opacity-50 z-50"
+    >
+      <div
+        class="modal-content bg-Renaissance_gray_4 mx-auto mt-10 p-2 md:p-6 rounded-md"
+      >
+        <section class="grid bg-Renaissance_gray_4">
+          <div id="closeModal" class="place-self-end cursor-pointer">
+            <img src="./assets/close.png" alt="Close" />
+          </div>
+          <div class="mt-8 mb-[3.25rem] place-self-center text-center">
+            <h1 class="text-4xl font-bold">Our Pricing</h1>
+            <p class="mt-2 text-lg">
+              Upgrade your account to unlock all the features and perks of
+              Headless HR
+            </p>
+          </div>
+          <div
+            class="CONTAINER grid gap-[1.22rem] place-self-center lg:grid-cols-2 xl:grid-cols-3 xl:max-w-[73rem] md:mx-6 lg:ml-6"
+          >
+            <div
+              class="rounded-[0.82rem] bg-white py-[1.63rem] px-[1.22rem] lg:w-[21.8rem]"
+            >
+              <div>
+                <h3 class="text-[1.63rem] font-semibold">Free Trial</h3>
+                <p class="text-[0.92rem] w-64 mt-[0.4rem]">
+                  Upload one recruitment form for free and see up to 20
+                  candidates
+                </p>
+              </div>
+              <div
+                class="border border-Renaissance_gray_4 w-[16.77rem] my-[0.82rem]"
+              ></div>
+              <h3 class="text-[1.63rem] font-semibold">Valid for 7 days</h3>
+              <p class="font-semibold text-[0.5rem] mb-[0.8rem]">Limited</p>
+              <h4 class="font-bold text-[1.02rem] mb-[1.5rem] text-[#1C1A1A]">
+                No credit card required
+              </h4>
+              <ul
+                class="grid gap-[0.82rem] text-[0.8175rem] md:text-[0.9175rem]"
+              >
+                <li class="flex items-center gap-2 lg:gap-[0.8rem]">
+                  <img src="./assets/tickRight.png" alt="tick right" />1 Form
+                  and 20 applicants
+                </li>
+                <li class="flex gap-2 lg:gap-[0.8rem]">
+                  <img src="./assets/tickWrong.png" alt="tick wrong" />Bulk
+                  rejection and acceptance email
+                </li>
+                <li class="flex gap-2 lg:gap-[0.8rem]">
+                  <img src="./assets/tickWrong.png" alt="tick wrong" />Add team
+                  members to forms
+                </li>
+                <li class="flex gap-2 lg:gap-[0.8rem]">
+                  <img src="./assets/tickRight.png" alt="tick right" />Limited
+                  call scheduling with candidates
+                </li>
+                <li class="flex gap-2 lg:gap-[0.8rem]">
+                  <img src="./assets/tickRight.png" alt="tick right" />Limited
+                  number or Resume preview
+                </li>
+              </ul>
+            </div>
+
+            <div
+              class="rounded-[0.82rem] bg-white py-[1.63rem] px-[1.22rem] lg:w-[21.8rem]"
+            >
+              <div>
+                <h3 class="text-[1.63rem] font-semibold">$15</h3>
+                <p class="text-[0.92rem] w-64 mt-[0.4rem]">
+                  Upload unlimited forms and see all candidates that apply
+                </p>
+              </div>
+              <div
+                class="border border-Renaissance_gray_4 w-[16.77rem] my-[0.82rem]"
+              ></div>
+              <h3 class="text-[1.63rem] font-semibold">$5</h3>
+              <p class="font-semibold text-[0.5rem] mb-[0.8rem]">Per Month</p>
+              <h4 class="font-bold text-[1.02rem] mb-[1.5rem] text-[#1C1A1A]">
+                Billed $15 Quarterly
+              </h4>
+              <ul
+                class="grid gap-[0.82rem] text-[0.8175rem] md:text-[0.9175rem]"
+              >
+                <li class="flex items-center gap-2 lg:gap-[0.8rem]">
+                  <img src="./assets/tickRight.png" alt="tick right" />1 Form
+                  and 20 applicants
+                </li>
+                <li class="flex gap-2 lg:gap-[0.8rem]">
+                  <img src="./assets/tickRight.png" alt="tick right" />Bulk
+                  rejection and acceptance email
+                </li>
+                <li class="flex gap-2 lg:gap-[0.8rem]">
+                  <img src="./assets/tickRight.png" alt="tick right" />Add team
+                  members to forms
+                </li>
+                <li class="flex gap-2 lg:gap-[0.8rem]">
+                  <img src="./assets/tickRight.png" alt="tick right" />Limited
+                  call scheduling with candidates
+                </li>
+                <li class="flex gap-2 lg:gap-[0.8rem]">
+                  <img src="./assets/tickRight.png" alt="tick right" />Limited
+                  number or Resume preview
+                </li>
+              </ul>
+            </div>
+
+            <div
+              class="rounded-[0.82rem] bg-white py-[1.63rem] px-[1.22rem] lg:w-[21.8rem]"
+            >
+              <div>
+                <h3 class="text-[1.63rem] font-semibold">$50</h3>
+                <p class="text-[0.92rem] w-64 mt-[0.4rem]">
+                  Upload unlimited forms and see all candidates that apply
+                </p>
+              </div>
+              <div
+                class="border border-Renaissance_gray_4 w-[16.77rem] my-[0.82rem]"
+              ></div>
+              <h3 class="text-[1.63rem] font-semibold">$5</h3>
+              <p class="font-semibold text-[0.5rem] mb-[0.8rem]">Per Month</p>
+              <h4 class="font-bold text-[1.02rem] mb-[1.5rem] text-[#1C1A1A]">
+                Billed $50 Yearly
+              </h4>
+              <ul
+                class="grid gap-[0.82rem] text-[0.8175rem] md:text-[0.9175rem]"
+              >
+                <li class="flex items-center gap-2 lg:gap-[0.8rem]">
+                  <img src="./assets/tickRight.png" alt="tick right" />1 Form
+                  and 20 applicants
+                </li>
+                <li class="flex gap-2 lg:gap-[0.8rem]">
+                  <img src="./assets/tickRight.png" alt="tick right" />Bulk
+                  rejection and acceptance email
+                </li>
+                <li class="flex gap-2 lg:gap-[0.8rem]">
+                  <img src="./assets/tickRight.png" alt="tick right" />Add team
+                  members to forms
+                </li>
+                <li class="flex gap-2 lg:gap-[0.8rem]">
+                  <img src="./assets/tickRight.png" alt="tick right" />Limited
+                  call scheduling with candidates
+                </li>
+                <li class="flex gap-2 lg:gap-[0.8rem]">
+                  <img src="./assets/tickRight.png" alt="tick right" />Limited
+                  number or Resume preview
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
     <script src="./nav.js"></script>
     <script src="./toggle.js"></script>
     <script src="./request.js"></script>
+    <script src="./pricing.js"></script>
   </body>
 </html>
