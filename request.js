@@ -10,6 +10,7 @@ const api = axios.create({
   },
 });
 
+
 const joinWaitList = async () => {
   const email = document.getElementById("emailInput").value;
 
@@ -25,16 +26,24 @@ const joinWaitList = async () => {
     listIds: [34],
     updateEnabled: false,
   };
+  console.log(payload);
 
   try {
-    const res = await api.post("/contacts", payload);
-    if (res.status === 201) {
-      alert("Your message was sent successfully");
+    const response = await api.post("/contacts", payload);
+
+    if (response.status === 201) {
+      console.log(response.data);
+      //to empty the input when successful
+      document.getElementById("emailInput").value = "";
+      alert("Your email was sent successfully");
     } else {
-      alert("Something went wrong! Try again");
+      console.log(response);
+      alert("Error: Unable to send email");
     }
   } catch (err) {
-    alert("Something went wrong! Try again");
+    console.error(err);
+    console.error(err.response.data);
+    alert("Error: Unable to send email, Please try again");
   }
 };
 
