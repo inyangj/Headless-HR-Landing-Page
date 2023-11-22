@@ -7,7 +7,6 @@ const headers = {
   "content-type": "application/json",
 };
 
-
 const api = axios.create({
   baseURL: "https://api.sendinblue.com/v3",
   headers: headers,
@@ -33,17 +32,12 @@ const joinWaitList = async () => {
     const response = await api.post("/contacts", payload);
 
     if (response.status === 201) {
-      console.log(response.data);
-   
       document.getElementById("emailInput").value = "";
       alert("Your email was sent successfully");
     } else {
-      console.log(response);
       alert("Error: Unable to send email");
     }
   } catch (err) {
-    console.error(err);
-    console.error(err.response.data);
     alert("Error: Unable to send email, Please try again");
   }
 };
