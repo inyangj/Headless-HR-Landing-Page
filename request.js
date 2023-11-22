@@ -1,5 +1,5 @@
 const apiKey =
-  "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";
+  "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";
 
 const headers = {
   "api-key": apiKey,
@@ -7,7 +7,7 @@ const headers = {
   "content-type": "application/json",
 };
 
-console.log(headers["api-key"]);
+
 const api = axios.create({
   baseURL: "https://api.sendinblue.com/v3",
   headers: headers,
@@ -25,7 +25,7 @@ const joinWaitList = async () => {
     email: email,
     emailBlacklisted: false,
     smsBlacklisted: false,
-    listIds: [34],
+    listIds: [3],
     updateEnabled: false,
   };
 
@@ -34,7 +34,7 @@ const joinWaitList = async () => {
 
     if (response.status === 201) {
       console.log(response.data);
-      //to empty the input when successful
+   
       document.getElementById("emailInput").value = "";
       alert("Your email was sent successfully");
     } else {
