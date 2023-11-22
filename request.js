@@ -1,15 +1,17 @@
 const apiKey =
   "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";
 
+const headers = {
+  "api-key": apiKey,
+  accept: "application/json",
+  "content-type": "application/json",
+};
+
+console.log(headers["api-key"]);
 const api = axios.create({
   baseURL: "https://api.sendinblue.com/v3",
-  headers: {
-    "api-key": apiKey,
-    accept: "application/json",
-    "content-type": "application/json",
-  },
+  headers: headers,
 });
-
 
 const joinWaitList = async () => {
   const email = document.getElementById("emailInput").value;
@@ -26,7 +28,6 @@ const joinWaitList = async () => {
     listIds: [34],
     updateEnabled: false,
   };
-  console.log(payload);
 
   try {
     const response = await api.post("/contacts", payload);
