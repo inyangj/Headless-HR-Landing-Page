@@ -7,6 +7,8 @@ const headers = {
   "content-type": "application/json",
 };
 
+console.log(headers["api-key"])
+
 const api = axios.create({
   baseURL: "https://api.sendinblue.com/v3",
   headers: headers,
@@ -38,7 +40,8 @@ const joinWaitList = async () => {
       alert("Error: Unable to send email");
     }
   } catch (err) {
-    alert("Error: Unable to send email, Please try again");
+   
+    alert(err);
   }
 };
 
