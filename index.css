@@ -3,6 +3,7 @@
 body {
   font-family: "Open Sans", sans-serif;
 }
+/* toogle styling for organization and applicant */
 
 .active {
   color: rgb(26 26 26);
@@ -23,6 +24,7 @@ body {
 .check {
   transition: 0.3s ease-in-out;
 }
+/* modal styling */
 
 .modal {
   display: flex;
@@ -43,4 +45,52 @@ body {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* input div focus styling */
+
+.hero {
+  border-color: #6145d0;
+}
+
+.focused-border {
+  border-color: #177ae5;
+}
+
+/* toastify styling */
+
+.toastify-warning {
+  background-color: #ffc107;
+  color: #212529;
+  width: fit-content;
+  padding: 1rem 1.5rem;
+  position: fixed;
+  z-index: 9999;
+  top: 50%;
+  right: 30px;
+  transform: translate(-50%, -50%);
+}
+
+.toastify-success {
+  background-color: #28a745;
+  color: #fff;
+  width: fit-content;
+  padding: 1rem 1.5rem;
+  position: fixed;
+  z-index: 9999;
+  top: 50%;
+  right: 30px;
+  transform: translate(-50%, -50%);
+}
+
+.toastify-error {
+  background-color: #dc3545;
+  color: #fff;
+  width: fit-content;
+  padding: 1rem 1.5rem;
+  position: fixed;
+  z-index: 9999;
+  top: 50%;
+  right: 30px;
+  transform: translate(-50%, -50%);
 }

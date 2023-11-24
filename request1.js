@@ -1,23 +1,23 @@
-//Waitlist for the hero section
+//Waitlist for the footer section
 
-const headers = {
+const head = {
   accept: "application/json",
   "content-type": "application/json",
 };
 
-const api = {
-  headers: headers,
+const apiCall = {
+  headers: head,
 };
 
-const validEmail = (email) => {
+const isValidEmail = (email) => {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
 };
 
-const joinWaitList = async () => {
-  const email = document.getElementById("emailInput").value;
+const joinList = async () => {
+  const emailInput = document.getElementById("emailnput").value;
 
-  if (!email) {
+  if (!emailInput) {
     Toastify({
       text: "Please enter an email address",
       duration: 3000,
@@ -27,7 +27,7 @@ const joinWaitList = async () => {
     return;
   }
 
-  if (!validEmail(email)) {
+  if (!isValidEmail(emailInput)) {
     Toastify({
       text: "Please enter a valid email address",
       duration: 3000,
@@ -37,8 +37,8 @@ const joinWaitList = async () => {
     return;
   }
 
-  const payload = {
-    email: email,
+  const loader = {
+    email: emailInput,
     emailBlacklisted: false,
     smsBlacklisted: false,
     listIds: [3],
@@ -48,8 +48,8 @@ const joinWaitList = async () => {
   axios
     .post(
       "https://headless-hr-backend-v2-35a261853dcc.herokuapp.com/api/v1/waitlist",
-      payload,
-      { api }
+      loader,
+      { apiCall }
     )
     .then((response) => {
       if (response.status === 201) {
@@ -60,7 +60,7 @@ const joinWaitList = async () => {
           className: "toastify-success",
         }).showToast();
 
-        document.getElementById("emailInput").value = "";
+        document.getElementById("emailnput").value = "";
       } else {
         Toastify({
           text: "Error: Unable to send email, Please try again",
@@ -80,7 +80,4 @@ const joinWaitList = async () => {
     });
 };
 
-document
-  .getElementById("joinWaitlistBtn")
-  .addEventListener("click", joinWaitList);
-document.getElementById("joinWaitlist").addEventListener("click", joinWaitList);
+document.getElementById("WaitlistBtn").addEventListener("click", joinList);

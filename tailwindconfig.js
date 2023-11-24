@@ -13,6 +13,7 @@ tailwind.config = {
         Renaissance_gray_4: "#C7C9CC",
         purple_2: "#6145D0",
         green_600: "#00B058",
+        mainBlue: '#177AE5',
       },
       boxShadow: {
         "3xl": "0px 1px 0px 0px rgba(27, 31, 35, 0.05)",
